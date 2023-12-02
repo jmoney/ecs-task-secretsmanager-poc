@@ -107,6 +107,12 @@ resource "aws_ecs_task_definition" "secrets_manager_poc" {
             entrypoint = [
                 "/app/main"
             ]
+            environment = [
+                {
+                    name = "VISIBLE_SECRET"
+                    valueFrom = aws_secretsmanager_secret.secret_key.arn
+                }
+            ]
             secrets = [
                 {
                     name = "SECRET"
