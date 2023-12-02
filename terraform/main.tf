@@ -109,8 +109,8 @@ resource "aws_ecs_task_definition" "secrets_manager_poc" {
             ]
             environment = [
                 {
-                    name = "VISIBLE_SECRET"
-                    valueFrom = aws_secretsmanager_secret.secret_key.arn
+                    name = "ENVIRONMENT_SECRET"
+                    value = aws_secretsmanager_secret.secret_key.arn
                 }
             ]
             secrets = [
