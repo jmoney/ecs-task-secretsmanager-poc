@@ -12,5 +12,6 @@ var (
 )
 
 func main() {
-	ilog.Printf("Environment Secret: %s\nDecrypted Secret: %s\n", environSecret, secret)
+	ilog.Printf("Environment Secret: %s\n", environSecret)
+	ilog.Printf("Decrypted Secret: %s\n", secret)
 }
