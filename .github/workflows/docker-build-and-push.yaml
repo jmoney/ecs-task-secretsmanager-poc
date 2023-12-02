@@ -22,4 +22,4 @@ jobs:
               uses: docker/build-push-action@v5
               with:
                 push: true
-                tags: jmoney/secrets-manager-poc:latest
+                tags: ghcr.io/jmoney/secrets-manager-poc:latest
